@@ -14,3 +14,60 @@ body{
     font-family: Inter, Arial, Helvetica, sans-serif;
     color: var(--color-body);
 }
+
+a{
+    text-decoration: none;
+}
+
+.link-arrow::after{
+    content: '-->';
+    margin-left: 5px;
+    transition: margin 0.2s;
+}
+ 
+.link-arrow{
+    color: var(--color-accent);
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: bold;
+
+}
+
+.link-arrow:hover::after{
+    margin-left: 10px;
+
+}
+
+/* badges */
+
+.badges{
+    border-radius: 20px;
+    padding: 0.5rem 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.badges--primary{
+    background-color: var(--color-primary);
+    color: #fff;
+}
+
+.badges--secondary{
+    background-color: var(--color-secondary);
+    color: #fff;
+}
+
+.badges--small{
+    font-size: 1.6rem;
+}
+
+@media screen and (min-width: 1024px){
+    .badges{
+        font-size: 1.5rem;
+    }
+
+    .badges--small{
+        font-size: 1.2rem;
+    }
+}
