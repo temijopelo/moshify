@@ -4,6 +4,8 @@
     --color-headings: #1b0760;
     --color-primary: #2584ff;
     --color-secondary: #00d9ff;
+    --color-border: #ccc;
+    --border-radius: 30px;
 }
 
 *, *::after, *::before{
@@ -173,4 +175,33 @@ a{
 .btn--block{
     width: 100%;
     display: inline-block;
+}
+
+.input{
+    border-radius: var(--border-radius)  ;
+    border: 1px solid var(--color-border);
+    color: var(--color-headings);
+    font-size: 2rem;
+    outline: 0;
+    padding: 1.5rem 3.5rem;
+}
+
+::placeholder{
+    color: #cdcdd7;
+}
+
+.input-group .input{
+    border: 0;
+    flex-grow: 1;
+    padding: 1.5rem 1rem;
+}
+
+.input-group .btn{
+    margin: 4px;
+}
+
+.input-group{
+    border: 1px solid var(--color-body);
+    display: flex;
+    border-radius: var(--border-radius);
 }
