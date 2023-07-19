@@ -44,9 +44,9 @@ a{
 
 }
 
-/* badges */
+/* badge component*/
 
-.badges{
+.badge{
     border-radius: 20px;
     font-size: 2rem;
     font-weight: 600;
@@ -54,29 +54,32 @@ a{
     white-space: nowrap;
 }
 
-.badges--primary{
+.badge--primary{
     background-color: var(--color-primary);
     color: #fff;
 }
 
-.badges--secondary{
+.badge--secondary{
     background-color: var(--color-secondary);
     color: #fff;
 }
 
-.badges--small{
+.badge--small{
     font-size: 1.6rem;
+    padding: 0.5rem 1.5rem;
 }
 
 @media screen and (min-width: 1024px){
-    .badges{
+    .badge{
         font-size: 1.5rem;
     }
 
-    .badges--small{
+    .badge--small{
         font-size: 1.2rem;
     }
 }
+
+/* list component  */
 
 .list{
     color: var(--color-headings);
@@ -100,6 +103,7 @@ a{
     padding-left: 0.5rem;
 }
 
+/* icon component  */
 
 .icon{
     height: 40px;
@@ -120,6 +124,7 @@ a{
     width: 60px;
 }
 
+/* button component  */
 
 .btn{
     font-size: 1.8rem;
@@ -177,6 +182,8 @@ a{
     display: inline-block;
 }
 
+/* input component  */
+
 .input{
     border-radius: var(--border-radius)  ;
     border: 1px solid var(--color-border);
@@ -205,3 +212,116 @@ a{
     display: flex;
     border-radius: var(--border-radius);
 }
+
+ /* card component */
+
+
+ .card{
+    border-radius: 7px;
+    box-shadow: 0 0 20px 10px #f3f3f3;
+    overflow: hidden;
+ }
+
+ .card__header, .card__body{
+    padding: 2rem 3rem;
+
+ }
+
+ .card--primary .card__header{
+    background-color: var(--color-primary);
+    color: #fff;
+ }
+
+ .card--secondary .card__header{
+    background-color: var(--color-secondary);
+    color: #fff;
+ }
+
+ .card--secondary .badge--secondary{
+    background: #02cdf1;
+ }
+
+ /* plan component  */
+
+.plan__name{
+    font-weight: 500;
+    margin: 0;
+    font-size: 2.4rem;
+    color: #fff;
+}
+
+
+.plan__price{
+    font-size: 6rem;
+}
+
+.plan__billing-cycle{
+    font-size: 2.4rem;
+    font-weight: 300;
+    opacity: 0.8;
+    margin-right: 1rem;
+}
+
+.plan__description{
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    display: block;
+}
+
+.plan .list__item{
+    margin-bottom: 2rem;
+}
+
+.plan--popular .card__header{
+    position: relative;
+}
+
+.plan--popular .card__header::before{
+    content: url(../img/popular.svg);
+    display: inline;
+    width: 40px;
+    position: absolute;
+    top: -6px;
+    right: 5%;
+
+}
+
+
+@media screen and (min-width: 1024px) {
+    .plan__name{
+        font-size: 1.4rem;
+    }
+
+    .plan__price{
+        font-size: 5rem;
+    }
+
+    .plan__billing-cycle{
+        font-size: 1.6rem;
+    }
+
+    .plan__description{
+        font-size: 1.7rem;
+    }
+}
+
+/* media components  */
+
+.media{
+    display: flex;
+}
+
+.media__title{
+    margin-top: 0;
+}
+
+.media__body{
+    margin: 0 2rem;
+}
+
+.media__image{
+    margin-top: 1rem;
+}
+
+/* quote component */
