@@ -13,6 +13,11 @@
     box-sizing: border-box;
 }
 
+::selection{
+    background: var(--color-primary);
+    color: #fff;
+}
+
 html{
     font-size: 62.5%;
 }
@@ -43,11 +48,12 @@ h1{
 }
 
 h2{
-    font-size: 5rem;
+    font-size: 4rem;
 }
 
 h3{
-    font-size: 4rem;
+    font-size: 3rem;
+    font-weight: 500;
 }
 
 .container{
@@ -112,7 +118,6 @@ h3{
 /* list component  */
 
 .list{
-    color: var(--color-headings);
     list-style: none;
     padding-left: 0;
 }
@@ -126,6 +131,7 @@ h3{
 .list--tick{
     list-style-image: url(../img/tick.svg);
     padding-left: 3rem;
+    color: var(--color-headings);
 }
 
 .list--tick .list__item{
@@ -387,6 +393,7 @@ h3{
 
 .media{
     display: flex;
+    margin-bottom: 4rem;
 }
 
 .media__title{
@@ -588,6 +595,7 @@ h3{
 
 .block__header{
     text-align: center;
+    margin-bottom: 4rem;
 }
 
 .block__heading{
@@ -605,11 +613,11 @@ h3{
 
 .block--skewed-right{
     padding-bottom: calc(var(--padding-vertical) + 4rem);
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
 }
 .block--skewed-left{
     padding-bottom: calc(var(--padding-vertical) + 4rem);
-    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 9 0%, 0% 100%);
 }
 
 /* nav component  */
@@ -738,4 +746,52 @@ h3{
 .block-plans .card{
     max-width: 500px;
     margin: o auto;
+}
+
+/* FEATURE  */
+
+.feature{
+    gap: 4rem 2rem;
+    margin: 12rem 0;
+}
+
+.feature:first-of-type{
+    margin-top: 6rem;
+}
+
+.feature__heading{
+    margin: 1rem 0;
+}
+
+.feature__img{
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .feature:nth-of-type(even) .feature__content{
+        order: 2;
+    }
+}
+
+/* showcase block  */
+
+.block-showcase__img > img{
+    width: 100%;
+}
+
+
+@media screen and (min-width: 768px) {
+    .block--showcase .grid{
+        grid-template-columns: 50% 50%;
+    
+    }
+
+    .block-showcase__img{
+        justify-self: end;
+    }
+
+    .block-showcase__img > img {
+        width: auto;
+        max-width: 700px;
+    }
 }
